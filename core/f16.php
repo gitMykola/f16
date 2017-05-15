@@ -1,4 +1,4 @@
-<?
+<?php 
 Class Route
 {
 	static function start(){
@@ -10,24 +10,18 @@ Class Route
 		$action_name = 'start';
 						
 		$routes = explode('/', $_SERVER['REQUEST_URI']);
-		if(!empty($routes[1])) 
+		if(isset($_GET['lang']) && !empty($_GET['lang'])) 
 			{
-				if(strlen($routes[1]) == 2)
+				if(strlen($_GET['lang']) == 2)
 					{
-					switch(strtolower($routes[1]))
+					switch(strtolower($_GET['lang']))
 						{
 							case 'en':
 							$lang_key = 'en';
 							break;
 							default:
 							$lang_key = 'ru';
-						}
-					if(!empty($routes[2])) $controller_name = $routes[2];
-						if(!empty($routes[3])) $action_name = $routes[3];					
-					}
-				else{
-						$controller_name = $routes[1];
-						if(!empty($routes[2])) $action_name = $routes[2];
+						}					
 					}
 			}	
 		
@@ -52,13 +46,13 @@ Class Route
 		//echo $lang_key.'<br>';		
 		
 		if(file_exists($controller_path)){include $controller_path;}
-		//else{Route::Error404();}
+		else{Route::Error404();}
 		
 		$controller = new $controller_name($lang_key);
 		$action = $action_name;
 		
-		if(method_exists($controller, $action)){$controller->$action($lang_key);}
-		//else{Route::Error404();}
+		if(method_exists($controller, $action)){$controller->$action();}
+		else{Route::Error404();}
 	}
 	function Error404(){
 		$host = 'http://'.$_SERVER['HTTP_HOST'].'/';

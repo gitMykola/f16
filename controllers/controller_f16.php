@@ -9,9 +9,9 @@ class controller_f16 {
 			//$this->model = new model_f16;
 			$this->view = new view_f16($lang_key);
 		}
-	function action_start($lang_key)
+	function action_start()
 		{
-			$this->view->generate('template_f16.php', &$this->view->placeholders);
+			$this->view->generate('template_f16.php', $this->view->placeholders);
 		}
 	function action_login(){
 	}
