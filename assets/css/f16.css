@@ -40,7 +40,7 @@ a,p,span,div,h1,h2,h3,h4,h5,h6{
 }
 .startText{
 	display:block;
-	position:absolute;
+	position:fixed;
 	top:40%;
 	left:0;
 	width:100%;
@@ -95,7 +95,8 @@ a,p,span,div,h1,h2,h3,h4,h5,h6{
 #infoSlide .info-background{
 	display:block;
 	position:absolute;
-	height:800px;
+	min-width:100%;
+	min-height:800px;
 	top:0;
 	left:0;
 	opacity:0.3;
@@ -103,6 +104,11 @@ a,p,span,div,h1,h2,h3,h4,h5,h6{
 @media screen and (max-width:580px){
 	.startText h1{
 	letter-spacing:30px;
+}
+}
+@media screen and (max-width:520px){
+	.startText h1{
+	letter-spacing:20px;
 }
 }
 @media screen and (max-width:376px){
