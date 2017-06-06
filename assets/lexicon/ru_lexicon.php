@@ -1,5 +1,5 @@
 <?
-$this->placeholders['site_url'] = 'http://f16.od.ua/';
+$this->placeholders['site_url'] = 'https://f16.od.ua/';
 $this->placeholders['title'] = 'ФОНТАНСКИЙ';
 $this->placeholders['name_osbb'] = 'ФОНТАНСКИЙ';
 $this->placeholders['number_osbb'] = '16245';
