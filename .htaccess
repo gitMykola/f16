@@ -1,0 +1,17 @@
+  RewriteEngine On
+  RewriteBase /
+
+# RewriteCond %{HTTP_HOST} ^marys.f16\.od\.ua$ [NC]
+# RewriteRule ^(.*)$ http://f16.od.ua/ru/index.php?id=2$1 [R=301,L]
+  
+#  RewriteCond %{HTTP_HOST} !^www.f16\.od\.ua$ [NC]
+#  RewriteRule ^(.*)$ http://www.f16.od.ua/$1 [L,R=301]
+
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f	
+  RewriteRule ^ index.php? [L]
+
+
+
+

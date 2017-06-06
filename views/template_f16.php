@@ -16,9 +16,9 @@
 		<script src="<?php echo $placeholders['site_url'];?>assets/js/my.js"></script>
 </head>
 	<body>
-	<span class="test" style="position:fixed;color:#fff;background:#000;z-index:10;font-size:30px;">111</span>
+	
   <?php include 'views/template_top_nav.php';?>
-		<div class="container slide" id="startSlide">
+		<div class="container" id="startSlide">
 			<div class="startText">
 				<div class="light"></div>
 				<h1 class="f16-red"><?php echo $placeholders['name_osbb'];?></h1>
@@ -27,14 +27,11 @@
 			<h1 class="nameText"><?php echo $placeholders['text_osbb'];?></h1>
 		</div>	
 		<div class="container" id="infoSlide">
-		<img class="info-background" src="<?php echo $placeholders['site_url'];?>img/fasade.jpg" alt="Home image"/>
+    <div class="back-dark"></div>
 		</div>
-		<div id="modal" class="text-center hidden">
-			<h1 class="message"></h1>
-			<a href="#" onclick="$(this.parentNode).fadeOut();">Continue create tasks</a>
-			<a href="http://klimatcontrol.com.ua/task/create" onclick="$(this.parentNode).fadeOut();">New task</a>
-			<a href="http://klimatcontrol.com.ua/task/admin" onclick="$(this.parentNode).fadeOut();">Back to tasks list</a>
-			<span class="glyphicon glyphicon-remove w3-xlarge" onclick="$(this.parentNode).fadeOut();"></span>
+    <div class="container" id="aboutSlide">
+		</div>
+    <div class="container" id="contactSlide">
 		</div>
 	</body>
 </html>	

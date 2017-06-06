@@ -13,9 +13,15 @@ class controller_f16 {
 		{
 			$this->view->generate('template_f16.php', $this->view->placeholders);
 		}
-	function action_login(){
-	}
-	function action_logout(){
-	}
+	function action_login()
+		{
+		}
+	function action_logout()
+		{
+		}
+    function action_cube()
+    {
+        $this->view->generate('cube.php', $this->view->placeholders);
+    }
 }
 
